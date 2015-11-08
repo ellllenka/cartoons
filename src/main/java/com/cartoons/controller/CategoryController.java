@@ -14,11 +14,10 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
-
-    @RequestMapping(value = "/categories", method = RequestMethod.GET)
+    @RequestMapping(value = "/category", method = RequestMethod.GET)
     @ResponseBody
-    public Iterable<Category> getCategories(){
-        return categoryService.getCategories();
+    public Iterable<Category> getAllCategories(){
+        return categoryService.getAllCategories();
     }
 
 }

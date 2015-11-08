@@ -19,7 +19,7 @@ public class CategoryService {
     @Autowired
     CategoryRepository categoryRepository;
 
-    public Iterable<Category> getCategories() {
+    public Iterable<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
 }
