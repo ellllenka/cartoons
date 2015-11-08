@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="cartoonsApp">
+<head>
+    <meta charset="utf-8">
+    <title>Cartoons catalog</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/cartoons.css">
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+<div class="cartoons text-center" ng-controller="CartoonsListCtrl">
+
+    <div class="form-inline add-cartoon">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" ng-model="name">
+        </div>
+        <div class="form-group">
+            <label>Link</label>
+            <input type="text" class="form-control" ng-model="link">
+        </div>
+        <div class="form-group">
+            <label>Priority</label>
+            <input type="text" class="form-control" ng-model="priority">
+        </div>
+        <div class="form-group">
+            <label>Categories</label>
+            <input type="text" class="form-control" ng-model="categories">
+        </div>
+
+        <button type="button" class="btn btn-primary" ng-click="addCartoon()">Add</button>
+    </div>
+
+    <div class="cartoons-table" >
+        <table class="table table-striped text-left">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Priority</th>
+                <th>Categories</th>
+                <th>Viewed</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="cartoon in cartoons">
+                <td><input type="checkbox" ng-model="cartoon.selected"></td>
+                <td>{{cartoon.name}}</td>
+                <td>{{cartoon.link}}</td>
+                <td>{{cartoon.priority}}</td>
+                <td>{{cartoon.categories}}</td>
+                <td>{{cartoon.viewed}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form-horizontal cartoons__btns">
+        <div class="form-group">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-primary" ng-click="deleteCartoon()">Delete</button>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="btn btn-primary" ng-click="setViewed()">Set viewed</button>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

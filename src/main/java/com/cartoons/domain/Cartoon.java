@@ -4,9 +4,6 @@ import javax.persistence.*;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created by MyUser on 20.10.2015.
- */
 @Entity
 public class Cartoon {
     @Id

@@ -1,0 +1,20 @@
+.cartoons-table {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    bottom: 100px;
+    top: 50px;
+    min-width: 400px;
+}
+
+.cartoons__btns {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+
+.add-cartoon {
+    position: relative;
+    top: 10px;
+}
