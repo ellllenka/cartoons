@@ -33,15 +33,15 @@ public class CartoonController {
         return cartoonService.addCartoon(cartoon);
     }
 
-    @RequestMapping(value = "/cartoon", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/cartoon/{id}", method = RequestMethod.DELETE)
     @ResponseBody
-    public void dellCartoon (long id) {
+    public void dellCartoon (@PathVariable long id) {
         cartoonService.dellCartoon(id);
     }
 
-    @RequestMapping(value = "/cartoon/viewed", method = RequestMethod.PUT)
+    @RequestMapping(value = "/cartoon/viewed/{id}", method = RequestMethod.PUT)
     @ResponseBody
-    public void changeView(long id, boolean viewed){
+    public void changeView(@PathVariable long id, boolean viewed){
         cartoonService.changeView(id, viewed);
     }
 
